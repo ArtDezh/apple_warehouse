@@ -34,4 +34,10 @@ class AppleWarehouseTest {
         List<Apple> realResultGreenApples = appleWarehouse.findApplesByColor("green");
         assertEquals(3, realResultGreenApples.size());
     }
+
+    @Test
+    void findHeavyApples() {
+        List<Apple> realResult = appleWarehouse.findHeavyApples();
+        assertEquals(4, realResult.size());
+    }
 }
