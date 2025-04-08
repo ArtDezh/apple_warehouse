@@ -19,7 +19,7 @@ public class AppleWarehouse {
         return apples;
     }
 
-    List<Apple> getListOfGreenApples() {
+    /*List<Apple> getListOfGreenApples() {
         List<Apple> greenApples = new ArrayList<>();
 
         for (Apple apple: apples) {
@@ -35,5 +35,15 @@ public class AppleWarehouse {
             if (apple.getColor().equals("red")) redApples.add(apple);
         }
         return redApples;
+    }*/
+
+    List<Apple> findApplesByColor(String color) {
+        List<Apple> applesList = new ArrayList<>();
+
+        for (Apple apple: apples) {
+            if (apple.getColor().equals(color)) applesList.add(apple);
+        }
+
+        return applesList;
     }
 }
