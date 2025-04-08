@@ -7,6 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppleWarehouseTest {
 
+   private AppleWarehouse appleWarehouse = new AppleWarehouse();
+
+/*
+
     @Test
     void getListOfGreenApples() {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
@@ -19,5 +23,15 @@ class AppleWarehouseTest {
         AppleWarehouse appleWarehouse = new AppleWarehouse();
         List<Apple> realResult = appleWarehouse.findApplesByColor("red");
         assertEquals(4, realResult.size());
+    }
+*/
+
+    @Test
+    void findApplesByColor() {
+        List<Apple> realResultRedApples = appleWarehouse.findApplesByColor("red");
+        assertEquals(4, realResultRedApples.size());
+
+        List<Apple> realResultGreenApples = appleWarehouse.findApplesByColor("green");
+        assertEquals(3, realResultGreenApples.size());
     }
 }
