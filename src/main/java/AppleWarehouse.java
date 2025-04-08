@@ -17,7 +17,7 @@ public class AppleWarehouse {
 
         return apples;
     }
-    
+
     List<Apple> getListOfGreenApples() {
         List<Apple> greenApples = new ArrayList<>();
 
