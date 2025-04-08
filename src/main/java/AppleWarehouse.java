@@ -7,6 +7,7 @@ public class AppleWarehouse {
     private List<Apple> getAllApples() {
         List<Apple> apples = new ArrayList<>();
         apples.add(new Apple("red", 100));
+        apples.add(new Apple("red", 135));
         apples.add(new Apple("red", 160));
         apples.add(new Apple("red", 200));
         apples.add(new Apple("green", 200));
