@@ -49,11 +49,11 @@ public class AppleWarehouse {
         return applesList;
     }
 
-    List<Apple> findHeavyApples() {
+    List<Apple> findHeavyApples(int weight) {
         List<Apple> applesList = new ArrayList<>();
 
         for (Apple apple: apples) {
-            if (apple.getWeight() > 150) applesList.add(apple);
+            if (apple.getWeight() > weight) applesList.add(apple);
         }
 
         return applesList;

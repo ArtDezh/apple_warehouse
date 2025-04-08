@@ -37,7 +37,7 @@ class AppleWarehouseTest {
 
     @Test
     void findHeavyApples() {
-        List<Apple> realResult = appleWarehouse.findHeavyApples();
+        List<Apple> realResult = appleWarehouse.findHeavyApples(150);
         assertEquals(4, realResult.size());
     }
 }
