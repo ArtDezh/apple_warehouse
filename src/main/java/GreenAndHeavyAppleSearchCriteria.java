@@ -1,6 +1,9 @@
 public class GreenAndHeavyAppleSearchCriteria implements AppleSearchCriteria {
+
+    private GreenAppleSearchCriteria greenApple = new GreenAppleSearchCriteria();
+    private HeavyAppleSearchCriteria heavyApple = new HeavyAppleSearchCriteria();
     @Override
     public boolean test(Apple apple) {
-        return ("green".equals(apple.getColor()) && apple.getWeight() > 150);
+        return (greenApple.test(apple) && heavyApple.test(apple));
     }
 }
