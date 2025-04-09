@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class AppleWarehouse {
+class AppleWarehouse {
     private List<Apple> apples = getAllApples();
 
     private List<Apple> getAllApples() {
