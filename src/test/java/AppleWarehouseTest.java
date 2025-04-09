@@ -58,38 +58,18 @@ class AppleWarehouseTest {
 
     @Test
     void findApplesWithAnonymousClass() {
-        List<Apple> greenApples = appleWarehouse.findApples(new AppleSearchCriteria() {
-            @Override
-            public boolean test(Apple apple) {
-                return "green".equals(apple.getColor());
-            }
-        });
+        List<Apple> greenApples = appleWarehouse.findApples(apple -> "green".equals(apple.getColor()));
         assertEquals(3, greenApples.size());
 
-        List<Apple> redApples = appleWarehouse.findApples(new AppleSearchCriteria() {
-            @Override
-            public boolean test(Apple apple) {
-                return "red".equals(apple.getColor());
-            }
-        });
+        List<Apple> redApples = appleWarehouse.findApples(apple -> "red".equals(apple.getColor()));
 
         assertEquals(4, redApples.size());
 
-        List<Apple> lightApples = appleWarehouse.findApples(new AppleSearchCriteria() {
-            @Override
-            public boolean test(Apple apple) {
-                return apple.getWeight() <= 150;
-            }
-        });
+        List<Apple> lightApples = appleWarehouse.findApples(apple -> apple.getWeight() <= 150);
 
         assertEquals(5, lightApples.size());
 
-        List<Apple> heavyApples = appleWarehouse.findApples(new AppleSearchCriteria() {
-            @Override
-            public boolean test(Apple apple) {
-                return apple.getWeight() > 150;
-            }
-        });
+        List<Apple> heavyApples = appleWarehouse.findApples(apple -> apple.getWeight() > 150);
 
         assertEquals(4, heavyApples.size());
     }
