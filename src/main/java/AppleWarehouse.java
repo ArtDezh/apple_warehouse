@@ -58,4 +58,15 @@ class AppleWarehouse {
 
         return applesList;
     }
+
+    List<Apple> findApples(AppleSearchCriteria searchCriteria) {
+        List<Apple> result = new ArrayList<>();
+        for (Apple apple: apples) {
+            if (searchCriteria.test(apple)) {
+                result.add(apple);
+            }
+        }
+
+        return result;
+    }
 }
