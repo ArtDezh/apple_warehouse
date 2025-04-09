@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 class LightAppleSearchCriteriaTest {
 
     private LightAppleSearchCriteria criteria = new LightAppleSearchCriteria();

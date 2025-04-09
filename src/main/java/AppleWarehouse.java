@@ -19,30 +19,10 @@ class AppleWarehouse {
         return apples;
     }
 
-    /*
-    List<Apple> getListOfGreenApples() {
-        List<Apple> greenApples = new ArrayList<>();
-
-        for (Apple apple: apples) {
-            if (apple.getColor().equals("green")) greenApples.add(apple);
-        }
-        return greenApples;
-    }
-
-    List<Apple> getListOfRedApples() {
-        List<Apple> redApples = new ArrayList<>();
-
-        for (Apple apple: apples) {
-            if (apple.getColor().equals("red")) redApples.add(apple);
-        }
-        return redApples;
-    }
-    */
-
     List<Apple> findApplesByColor(String color) {
         List<Apple> applesList = new ArrayList<>();
 
-        for (Apple apple: apples) {
+        for (Apple apple : apples) {
             if (apple.getColor().equals(color)) applesList.add(apple);
         }
 
@@ -52,7 +32,7 @@ class AppleWarehouse {
     List<Apple> findHeavyApples(int weight) {
         List<Apple> applesList = new ArrayList<>();
 
-        for (Apple apple: apples) {
+        for (Apple apple : apples) {
             if (apple.getWeight() > weight) applesList.add(apple);
         }
 
@@ -61,7 +41,7 @@ class AppleWarehouse {
 
     List<Apple> findApples(AppleSearchCriteria searchCriteria) {
         List<Apple> result = new ArrayList<>();
-        for (Apple apple: apples) {
+        for (Apple apple : apples) {
             if (searchCriteria.test(apple)) {
                 result.add(apple);
             }
